@@ -1,0 +1,25 @@
+Veselina Gerova
+Dec 15, 2017\xc2\xb74 min read
+On a regular basis we curate some of the most interesting pieces of content we have seen about Messenger and messaging in general, bots, digital marketing, and fan engagement. Here are some things you may have missed\xe2\x80\xa6
+Jacqueline Feldman begins to tell her story in The New Yorker by first stating a very important fact; something she noticed when her job became to design the personality of a chatbot called Kai: most bots out there don\xe2\x80\x99t really have a personality.
+And the longer she worked on making the Kai bot \xe2\x80\x9cfriendly but authoritative, engaging but not creepy\xe2\x80\x9d, the more she realized certain truths about creating a character for a bot. For starters, she noted that:
+Chatbots must be agreeable to the point of obsequiousness.
+But what really struck her was the conclusion she reached: all assistants (like Cortana and Siri and Alexa) have female names and female voices. The bottom line here being that they all exude femininity in different aspects.
+\xe2\x80\xa6in the United States, the method for insuring that a technology speaks without giving offense has been to make it a woman
+This is problematic because:
+By creating interactions that encourage consumers to understand the objects that serve them as women, technologists abet the prejudice by which women are considered objects.
+It turns out that A.I. systems pretending to be female are often subjected to the same sorts of online harassment as women. In her opinion, the solution to this problem is to realize that bots don\xe2\x80\x99t need to be human. According to Jacqueline \xe2\x80\x9cWe don\xe2\x80\x99t need to make our technologies conform to the gender binary of human societies in order to like them.\xe2\x80\x9d
+Even though this piece was published about a year ago, this topic is extremely relevant nowadays given how our society is becoming more and more aware about harassment and gender dynamics.
+www.newyorker.com
+Recently, texting turned 25! Testing has transformed the way we communicate with one another over the years. This is probably why messaging has survived so long and has successfully evolved with the technological era.
+Dr John Lenarcic, a lecturer at RMIT\xe2\x80\x99s School of Business IT and Logistics who looks at the social and ethical aspects of technology, says that a text message is a hybrid form of communication.
+\xe2\x80\x9cIt\xe2\x80\x99s a cross between writing and speech \xe2\x80\xa6 you write in an abbreviated fashion,\xe2\x80\x9d he says. \xe2\x80\x9cIt is another stage of evolution of language.\xe2\x80\x9d
+www.theage.com.au
+Recently, there\xe2\x80\x99s been a lot of discussion when it comes to conversational interfaces, messenger bots, etc. People have had mixed experiences with these bots and that is understandable since we\xe2\x80\x99re still in the early days of bots.
+However, regardless of what anybody says, it is undeniable that messaging marketing is slowly but successfully taking over the world. And there are a few things you should be aware of when it comes to bot marketing before you start putting your strategy together.
+www.forbes.com
+The latest news in the music/tech world is that Apple is acquiring Shazam. Exciting stuff!
+\xe2\x80\x9cAlthough Apple hasn\xe2\x80\x99t shared or confirmed any plans regarding what it plans to do with Shazam\xe2\x80\x99s technology, it\xe2\x80\x99s easy to imagine how the service could fit into Apple Music. Shazam allows users to follow their favorite artists and see what they\xe2\x80\x99re listening to\xe2\x80\x9d
+time.com
+Liked this story? Show us with a standing ovation below! JK, even just a \xf0\x9f\x91\x8fwill do ;)
+Or maybe help us spread the \xe2\x9d\xa4 on social media . And if you still don\xe2\x80\x99t have your own bot yet, you can start now, it just takes a few clicks!
