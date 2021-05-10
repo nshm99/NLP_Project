@@ -56,7 +56,7 @@ def plot_most_used_words(category_string, data_series, palette):
     total_words = created_df.sum(axis=0)
     
     top_10_words = total_words.sort_values(ascending = False).head(10)
-    top_10_words_df = pd.DataFrame(top_20_words, columns = ["count"])
+    top_10_words_df = pd.DataFrame(top_10_words, columns = ["count"])
 
     sns.set_style("white")
     plt.figure(figsize = (12, 7), dpi=100)
@@ -145,9 +145,32 @@ def TF_IDF(text_0,text_1):
 
 
     df = pd.DataFrame([tfidfA, tfidfB])
-    df.to_csv('../data/raw/TF-IDF.csv', index = False)
+    df.to_csv('../data/process/TF-IDF.csv', index = False)
 
+def frequency(text):
+    # set_text = set(text)
+    counts = Counter(text)
 
+    labels, values = zip(*counts.items())
+
+    # sort your values in descending order
+    indSort = np.argsort(values)[::-1]
+
+    # rearrange your data
+    labels = np.array(labels)[indSort]
+    values = np.array(values)[indSort]
+    labels=labels[0:31]
+    values = values[0:31]
+
+    indexes = np.arange(len(labels))
+
+    bar_width = 0.35
+
+    plt.bar(indexes, values)
+
+    # add labels
+    plt.xticks(indexes + bar_width, labels)
+    plt.show()
 
 
 combined_data_word_broken = pd.read_csv('../data/process/combined_data_word_broken.csv')
@@ -179,4 +202,6 @@ with open('../data/process/analyze.csv', 'a+', newline='') as write_obj:
 plot_top_10(combined_data,text,text_0,text_1)
 # relative_normilized__freq(text,text_0,text_1)
 TF_IDF(text_0,text_1)
+
+frequency(text)
 

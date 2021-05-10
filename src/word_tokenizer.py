@@ -33,7 +33,7 @@ def process(blogs):
         words_only = tokenizer.tokenize(text)
         words_only_lem = [lemmatizer.lemmatize(i) for i in words_only]
         words_without_stop = [i for i in words_only_lem if i not in stopwords.words("english")]
-        long_string_clean = " ".join(word for word in words_without_stop)
+        long_string_clean = " ".join(word for word in words_without_stop if len(word)>3)
         processed.append(long_string_clean)
 
     return processed
