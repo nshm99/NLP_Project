@@ -1,0 +1,5 @@
+\textbf {عنوان}\nobreakspace {}\hfill \textbf {صفحه}\par \rule {\linewidth }{1pt}\par 
+\contentsline {section}{\numberline {1}بخش \lr {word2vec}}{3}{section.1}%
+\contentsline {section}{\numberline {2}بخش \lr {language model}}{6}{section.2}%
+\contentsline {section}{\numberline {3}بخش \lr {fine tuning}}{7}{section.3}%
+\contentsline {section}{\numberline {4}نکاتی درباره کد}{7}{section.4}%
