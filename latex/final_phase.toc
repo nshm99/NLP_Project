@@ -1,5 +1,9 @@
 \textbf {عنوان}\nobreakspace {}\hfill \textbf {صفحه}\par \rule {\linewidth }{1pt}\par 
 \contentsline {section}{\numberline {1}بخش \lr {word2vec}}{3}{section.1}%
-\contentsline {section}{\numberline {2}بخش \lr {language model}}{6}{section.2}%
-\contentsline {section}{\numberline {3}بخش \lr {fine tuning}}{7}{section.3}%
-\contentsline {section}{\numberline {4}نکاتی درباره کد}{7}{section.4}%
+\contentsline {section}{\numberline {2}بخش \lr {tokenization}}{6}{section.2}%
+\contentsline {section}{\numberline {3}بخش \lr {parsing}}{6}{section.3}%
+\contentsline {section}{\numberline {4}بخش \lr {language model}}{7}{section.4}%
+\contentsline {section}{\numberline {5}بخش \lr {fine tuning}}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}\lr {language model}}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}\lr {classification}}{8}{subsection.5.2}%
+\contentsline {section}{\numberline {6}نکاتی درباره کد}{9}{section.6}%

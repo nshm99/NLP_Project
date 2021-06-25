@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.5.15)  23 JUN 2021 16:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.5.15)  26 JUN 2021 00:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,6 +587,21 @@ LaTeX Warning: Label `f1' multiply defined.
 LaTeX Warning: Label `f1' multiply defined.
 
 
+LaTeX Warning: Label `f1' multiply defined.
+
+
+LaTeX Warning: Label `f1' multiply defined.
+
+
+LaTeX Warning: Label `f1' multiply defined.
+
+
+LaTeX Warning: Label `f1' multiply defined.
+
+
+LaTeX Warning: Label `f1' multiply defined.
+
+
 LaTeX Warning: Label `bib3' multiply defined.
 
 )
@@ -701,28 +716,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--88
  []
 
 [5]
+File: ../reports/dataframe.png Graphic file (type bmp)
+<../reports/dataframe.png>
+File: conll.png Graphic file (type bmp)
+<conll.png>
+File: tree.png Graphic file (type bmp)
+<tree.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--124
+[][]
+ []
+
+[6]
 File: arch.PNG Graphic file (type bmp)
 <arch.PNG>
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--103
+Underfull \hbox (badness 10000) in paragraph at lines 126--140
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--110
+Underfull \hbox (badness 10000) in paragraph at lines 141--147
 [][]
  []
 
+[7]
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 152.
+File: LM_motiv.PNG Graphic file (type bmp)
+<LM_motiv.PNG>
+File: LM_nonmotiv.PNG Graphic file (type bmp)
+<LM_nonmotiv.PNG>
 File: bert_eval.PNG Graphic file (type bmp)
 <bert_eval.PNG>
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--186
+[][]
+ []
+
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 [][][][][]$[][][][][] [] [] [] [][][][][][][][][][][][][] [] [][][] [] [][][][]
 [][][][][] [] [][][][][][][][] []$[][]
  []
 
 
-Overfull \hbox (233.04436pt too wide) in paragraph at lines 148--149
+Overfull \hbox (233.04436pt too wide) in paragraph at lines 208--209
 [][][][][]$[][][][][] [] [] [] [][][][][][][][][][][][][][][][][][] [] [][][] [
 ] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -730,7 +769,7 @@ Overfull \hbox (233.04436pt too wide) in paragraph at lines 148--149
  []
 
 
-Overfull \hbox (270.79436pt too wide) in paragraph at lines 151--152
+Overfull \hbox (270.79436pt too wide) in paragraph at lines 211--212
 [][][][][]$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][][][][][][]
 [][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -738,14 +777,33 @@ Overfull \hbox (270.79436pt too wide) in paragraph at lines 151--152
  []
 
 
-Overfull \hbox (170.04436pt too wide) in paragraph at lines 155--156
+Overfull \hbox (170.04436pt too wide) in paragraph at lines 215--216
 [][][][][]$[][][][][] [] [] [] [][][][][][][][][][][][][][][][][][][][][][] [] 
 [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[][][] []
 
  []
 
-[8] (./final_phase.aux)
+
+Overfull \hbox (105.54436pt too wide) in paragraph at lines 222--223
+[][][][][]$[][][][][] [] [] [] [][][][][][][][][][][][][][][][][][] [] [][][] [
+] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+[][]$[] [] [][][][][] [] [][][][][][][][] [] [][][][][][] [] [][][] [] [][][][]
+[][] [] [][][][][][][][][][] [] [][][][][][][][][][][][][][][][][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+[][]$[][][][] [] [][][][][][] [] [][][][] [] [][][][] [] [] [] [][][] [] [][][]
+[][][][] [] [][][] [] [] [] [][][][][] [] [][][][] []$[][]
+ []
+
+[10] (./final_phase.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -753,15 +811,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `final_phase.out' has not changed.
-(rerunfilecheck)             Checksum: 5CED2731196818CDBED8E5B8E5C4C99F;559.
+(rerunfilecheck)             Checksum: D4B2AD393C8CFD5F6A538AFA8D394369;1061.
  ) 
 Here is how much of TeX's memory you used:
- 12905 strings out of 476919
- 252086 string characters out of 5825424
- 742657 words of memory out of 5000000
- 32661 multiletter control sequences out of 15000+600000
- 407862 words of font info for 68 fonts, out of 8000000 for 9000
+ 12944 strings out of 476919
+ 252732 string characters out of 5825424
+ 743657 words of memory out of 5000000
+ 32690 multiletter control sequences out of 15000+600000
+ 407870 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 94i,9n,111p,1057b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,9n,111p,1057b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on final_phase.pdf (8 pages).
+Output written on final_phase.pdf (10 pages).

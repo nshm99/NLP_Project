@@ -85,6 +85,43 @@
 \newline
 برای پیدا کردن بایاس کلمات متفاوتی انتخاب شدند و با توجه به اینکه همه‌ی داده‌ها از یک موضوع نبودند و جمع چندین موضوع متفاوت بودند، پیدا کردن بایاس کار سختی بود و بعضا خروجی مناسبی تولید نمی‌شد(همانند مثال بالا برای female ) اما در مثال گفته شده بایاس مشخص می‌باشد به این صورت که برای female کلمات مرتبطی را تولید نمی‌کند اما برای male اولین کلمه‌ای که پیدا شده کلمه assault می‌باشد(و دو کلمه دیگر نیز حدودا باهمین مفهوم هستند) که به نظر من این نوعی بایاس می‌باشد که یک بدبینی نسبت به male دربرابر female می‌باشد(مثلا در موضوع assault ) که این بایاس در افکار جامعه و در نتیجه در متن جمع‌‌آوری شده نیز وجود دارد.
 \newline
+\section{بخش \lr{tokenization}}
+برای حل این قسمت ابتدا داده تمیز شده خوانده می‌شود. سپس داده به ۵ قسمت تقسیم می‌شود و در هر بار از ۵ بار اجرا، یک قسمت به عنوان داده تست و بقیه به عنوان داده آموزش انتخاب می‌شوند. سپس داده به صورت فایل \lr{.txt} ذخیره می‌شود. برای اندازه کلمات ۵ اندازه، ۱۰، ۳۰، ۱۰۰، ۱۰۰۰ و ۴۰۵۴ انتخاب شده است. سپس توسط کتابخانه \lr{sentencepiece} عملیات آموزش بر روی داده و با اندازه کلمات داده شده انجام می‌شود. مدل‌‌های تولید شده در پوشه\lr{models} قرار دارند. تعداد \lr{unk} های تولید شده نسبت به طول کل توکن‌های تولید شده در  \lr{tokenization counts.csv} ذخیره شده است. نسبت \lr{unk} های تولید شده به صورت زیر می‌باشد:
+\newline
+‎\graphicspath{{../reports}}‎
+
+\begin{figure}[h!]
+\centering{\includegraphics[scale=0.8]{dataframe.png}}
+\caption{نسبت \lr{unk} های تولید شده}
+\label{f1}
+\end{figure}
+\vspace{10mm}
+
+همانطور که در تصویر مشخص می‌باشد، هرچه تعداد کلمات بیشتر شود، نسبت\lr{unk} های تولید شده کاهش میابد.
+\section{بخش \lr{parsing}}
+برای حل این قسمت از کد تمرین سوم استفاده شده است. در این تمرین یک parser با داده‌های انگلیسی آموزش می‌بینید. برای بررسی عملکرد parser سه جمله به فرم conll تبدیل می‌شود و parser روی آن‌ها اعمال می‌شود.
+\\
+فایل conll به صورت زیر می‌باشد:
+\begin{figure}[h!]
+\centering{\includegraphics[scale=0.3]{conll.png}}
+\caption{فایل پارس درست جمله‌ها}
+\label{f1}
+\end{figure}
+\vspace{10mm}
+\newline
+\\ دقت parser برای این ۳ جمله ۶۵.۹۵ می‌باشد. 
+\newline
+یک نمونه از مواردی که parser در آن اشتباه دارد جمله زیر می‌باشد. درخت پارس جمله به صورت زیر می‌باشد:
+\newline
+\begin{figure}[h!]
+\centering{\includegraphics[scale=0.8]{tree.png}}
+\caption{درخت پارس}
+\label{f1}
+\end{figure}
+\vspace{10mm}
+\newline
+اما پارسر در انتخاب head کلمه some اشتباه دارد و head‌ آن را کلمه lose در نظر می‌گیرد.
+
 \section{بخش \lr{language model}}
 !برای اجرا این بخش با توجه به این‌که به GPU نیاز داشتم کد را در نوت‌بوک زدم و هم فایل نوت‌بوک و هم فایل \lr{.py} آن موجود است.
 \newline
@@ -109,8 +146,31 @@
 \newline
 
 با توجه به متن تولید شده به نظر می‌آید که شبکه کلمات را تقریبا متناسب با برچسب می‌دهد اما جملات تولید شده از نظر قواعد و معنی درست نیستند و به نظر من علت این موضوع این باشد که داده‌ای که مدل روی آن آموزش دیده است مناسب نبوده است، زیرا در مراحل اولیه پردازش داده بسیاری از اطلاعات (به طور مثال puncutaion و stopwrds ) حذف شده‌اند و تنها کلمات به مدل داده شده‌اند. به همین علت جملاتی تولیدی کیفیت مطلوب را ندارند اما می‌توان گفت کلمات تولید شده به درستی و مرتبط با برچسب تولید شده‌اند.
+
 \section{بخش \lr{fine tuning}}
 !این قسمت نیز همانند قسمت ۴ در نوت‌بوک نوشته شده است.
+\subsection{\lr{language model}}
+برای تولید language  model از آنجا که استفاده از bert کار مشکلی بود از مدل distilgpt2 استفاده شده است. در مرحله اول داده آموزش و تست به نسبت ۸۵ به ۱۵ از یکدیگر جدا می‌شوند. سپس مدل \lr{pretreined distilgpt2 } بارگذاری می‌شود و به صورت جدا روی هر کلاس داده \lr{fine tune} می‌شود.
+\\
+خروجی مدل برای کلاس motivational به صورت زیر می‌باشد:
+\begin{figure}[h!]
+\centering{\includegraphics[scale=0.4]{LM_motiv.PNG}}
+\caption{خروجی مدل برای کلاس motivational}
+\label{f1}
+\end{figure}
+\vspace{10mm}
+
+و برای کلاس nonMotivational به صورت زیر است:
+\begin{figure}[h!]
+\centering{\includegraphics[scale=0.4]{LM_nonmotiv.PNG}}
+\caption{خروجی مدل برای کلاس nonMotivational}
+\label{f1}
+\end{figure}
+\vspace{10mm}
+\\
+همانطور که از تصاویر مشخص می‌باشد این مدل نسبت به مدل قسمت قبل بسیار بهتر عمل می‌کند و علاوه بر اینکه کلمات رو مرتبط با برچسب می‌دهد، جملات از نظر ساختاری و معنایی نیز منطقی و درست می‌باشند.
+
+\subsection{\lr{classification}}
 در این قسمت برای classification با استفاده از bert ، ابتدا \lr{bert base uncased} که یک \lr{pretrained tokenizer } می‌باشد، load می‌شود.
 \newline
 سپس داده ورودی به دو دسته آموزش و تست دسته بندی می‌شود(داده ورودی داده پردازش شده و clean شده می‌باشد). سپس tokenizer گفته شده برای tokenize کردن دو داده آموزش و تست استفاده می‌شود.
@@ -122,13 +182,13 @@
 \label{f1}
 \end{figure}
 \vspace{10mm}
+\newline
 \section{نکاتی درباره کد}
 برای قسمت ۴ و ۵ از آنجایی که کد در کولب بود، دیتای موردنیاز دستی آپلود می‌شد(در کد \lr{.py} آدرس‌ها درست است اما در نوت‌بوک باید آپلود شود).
 به علت حجم بالای مدل‌ها امکان اپلود آن ها نبود به همین علت لینک درایو آن‌ها را قرار دادم.
 \newline
-لینک مدل‌های سوال ۴ : \lr{\href{https://drive.google.com/drive/folders/1QlL-aC4LFAVVRrEwDASixCeCh7siHU04?usp=sharing}{language model}}
-\newline
-لینک مدل سوال ۵ :  \lr{\href{https://drive.google.com/drive/folders/1-8g--A1XqQVx85308QcV9UW5e_yKRojK?usp=sharing}{bert classifier model}}
+مدل‌ها در پوشه models ذخیره‌ شده‌اند(برای مدل‌هایی که حجم بالایی داشتند لینک آن‌ها قرار داده شده است).
+برای قسمت parsing از آنجایی که مدل قبلا در تمرین آموزش دیده بود، دوباره آموزش داده نشده و آن قسمت از کد که مربوط به آموزش مدل بود از کد حذف شده است.
 \newline
 مدل‌های قسمت اول نیز در پوشه models قرار دارند.
 \newpage
@@ -156,6 +216,10 @@
 
 \bibitem{bib5}
 \url{https://huggingface.co/transformers/training.html}
+
+\bibitem{bib6}
+\url{https://towardsdatascience.com/train-gpt-2-in-your-own-language-fc6ad4d60171
+https://colab.research.google.com/github/philschmid/fine-tune-GPT-2/blob/master/Fine_tune_a_non_English_GPT_2_Model_with_Huggingface.ipynb#scrollTo=hKBSyNLgqF9K}
 \end{LTRbibitems}
 \end{thebibliography}
 \end{document} 
